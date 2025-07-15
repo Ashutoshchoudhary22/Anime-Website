@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import Footer from '../components/Footer';
+import video from '../assets/favourites Anime/video22.mp4';
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -14,14 +16,29 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to a backend API
     setStatus('Thank you for your message! We will get back to you soon.');
     setFormData({ name: '', email: '', message: '' });
   };
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative min-h-screen text-white py-12">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        onLoadedData={() => console.log('Video loaded')}
+        onError={(e) => console.error('Video error:', e)}
+      >
+        <source src={video} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      {/* Overlay for readability */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black/30 backdrop-blur-sm z-10" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         <h1 className="text-3xl font-bold mb-8 text-center">Contact Us</h1>
 
         {/* Contact Form */}
@@ -38,7 +55,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="mt-1 block w-full bg-gray-800 border border-gray-700 rounded-md p-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-600"
+                  className="mt-1 block w-full backdrop-blur-md bg-transparent border border-gray-700 rounded-md p-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
               </div>
               <div>
@@ -50,7 +67,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="mt-1 block w-full bg-gray-800 border border-gray-700 rounded-md p-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-600"
+                  className="mt-1 block w-full backdrop-blur-md bg-transparent border border-gray-700 rounded-md p-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
               </div>
               <div>
@@ -62,12 +79,12 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows="4"
-                  className="mt-1 block w-full bg-gray-800 border border-gray-700 rounded-md p-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-600"
+                  className="mt-1 block w-full backdrop-blur-md bg-transparent border border-gray-700 rounded-md p-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-md transition duration-300"
+                className="w-full bg-blue-400 hover:bg-blue-500 text-white font-semibold py-2 rounded-md transition duration-300"
               >
                 Send Message
               </button>
@@ -76,27 +93,17 @@ export default function Contact() {
           </div>
 
           {/* Contact Info and Map */}
-          <div>
+          <div className='mt-30'>
             <h2 className="text-xl font-semibold mb-4">Contact Information</h2>
-            <p className="text-gray-400 mb-2">Email: support@streamingplatform.com</p>
-            <p className="text-gray-400 mb-2">Phone: +1-234-567-8900</p>
-            <p className="text-gray-400 mb-4">Address: 123 Streaming Lane, Tech City, TC 12345</p>
-
-            <h3 className="text-lg font-semibold mb-2">Our Location</h3>
-            <div className="w-full h-64 bg-gray-800 rounded-md overflow-hidden">
-              {/* Replace with a static map image or embed if needed */}
-              <img
-                src="https://via.placeholder.com/400x250.png?text=Map+Placeholder"
-                alt="Location Map"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <p className="text-white mb-2">Email: Akkychoudhary5468@gmail.com</p>
+            <p className="text-white mb-2">Phone: +919870605594</p>
+            <p className="text-white mb-4">Address: India</p>
           </div>
-          
+         
         </div>
+      
       </div>
-            <Footer />
+      
     </div>
-    
   );
 }
