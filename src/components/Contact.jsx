@@ -39,12 +39,14 @@ export default function Contact() {
       <div className="absolute top-0 left-0 w-full h-full bg-black/30 backdrop-blur-sm z-10" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-        <h1 className="text-3xl font-bold mb-8 text-center">Contact Us</h1>
+     <h1 className="mx-auto  max-w-[700px] text-5xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-red-500 to-pink-500 drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] animate-pulse">
+           Contact Us
+          </h1>
 
         {/* Contact Form */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-xl font-semibold mb-4">Send Us a Message</h2>
+           
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-400">Name</label>

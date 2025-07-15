@@ -10,21 +10,21 @@ export default function Categories() {
       <div className="bg-black text-white">
         <Hero />
         <div className="mt-6">
-          <h1 className="text-center text-2xl font-bold my-2">Best Anime</h1>
+          <h1 className="mx-auto mb-4 text-center  max-w-[700px] text-5xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-red-400 to-pink-400 drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] animate-pulse">
+            Best Anime
+          </h1>
           <Category />
         </div>
         <div className="mt-6">
-          <h1 className="text-center text-2xl font-bold my-2">New Releases</h1>
+          <h1  className="mx-auto mb-4 text-center  max-w-[700px] text-5xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-red-400 to-pink-400 drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] animate-pulse">New Releases</h1>
           <Newreleases />
         </div>
         <div className="mt-6">
-          <h1 className="text-center text-2xl font-bold my-2">
-            Latest Anime
-          </h1>
+          <h1  className="mx-auto mb-4 text-center  max-w-[700px] text-5xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-red-400 to-pink-400 drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] animate-pulse">Latest Anime</h1>
           <Latestreleases />
         </div>
         <div className="mt-6">
-          <h1 className="text-center text-2xl font-bold my-2 ">
+          <h1  className="mx-auto mb-4 text-center  max-w-[700px] text-5xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-red-400 to-pink-400 drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] animate-pulse">
             All time Favourites{" "}
           </h1>
           <Alltimesfavourites />

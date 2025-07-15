@@ -31,11 +31,9 @@ export default function HeroSection() {
           <path d="M100 16c16 32 32 48 32 72a32 32 0 01-64 0c0-18 10-32 32-72z" />
           <path d="M100 88c24 32 48 48 48 80a48 48 0 01-96 0c0-24 14-42 48-80z" />
         </svg>
-        <h1 className="text-4xl sm:text-5xl font-light tracking-wider">
-          Anime Planet
-        </h1>
-        <p className="mt-1 text-lg sm:text-xl font-light opacity-80">
-         Welcome to Our Animie Planet
+       
+        <p  className="mx-auto  text-center  max-w-[700px] text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-red-500 to-pink-600 drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] animate-pulse">
+         Welcome to Our Anime Planet
         </p>
       </div>
     </section>

@@ -48,7 +48,6 @@ const galleryData = [
     colspan: { base: 2, sm: 2, md: 1, lg: 1 },
     rowspan: { base: 1, sm: 1, md: 1, lg: 1 },
   },
-  
   {
     src: nine,
     title: "Yuri Kuma Arashi Viverra Tortor Pharetra",
@@ -109,7 +108,7 @@ const galleryData = [
 
 const AnimeGallery = () => {
   return (
-    <section className="mx-auto max-w-7xl p-2 sm:p-4">
+    <section className="mx-auto max-w-7xl p-2 sm:p-4 bg-black">
       <div
         className="grid grid-cols-2 gap-2 auto-rows-[150px] 
           sm:grid-cols-4 sm:gap-3 sm:auto-rows-[200px]

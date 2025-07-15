@@ -20,12 +20,10 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center">
        
-        <h1 className="text-4xl sm:text-5xl font-light tracking-wider">
+        <h1  className="mx-auto  text-center  max-w-[700px] text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-red-500 to-pink-600 drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] animate-pulse">
          Our Categories
         </h1>
-        {/* <p className="mt-1 text-lg sm:text-xl font-light opacity-80">
-         Welcome to Our Categories Planet
-        </p> */}
+      
       </div>
     </section>
   );
