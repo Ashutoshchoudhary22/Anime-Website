@@ -7,15 +7,14 @@ import song from '../assets/song.mp3';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(true); // Start with song playing
-  const audioRef = useState(new Audio(song))[0]; // Create audio instance
+  const [isPlaying, setIsPlaying] = useState(true);
+  const audioRef = useState(new Audio(song))[0];
 
-  // Set up autoplay and loop on component mount
   useEffect(() => {
-    audioRef.loop = true; // Enable looping
+    audioRef.loop = true;
     audioRef.play().catch((e) => console.error('Audio play error:', e));
     return () => {
-      audioRef.pause(); // Cleanup: pause audio when component unmounts
+      audioRef.pause();
     };
   }, [audioRef]);
 
@@ -31,14 +30,16 @@ export default function Navbar() {
   const link = 'px-4 py-2 hover:text-pink-500 transition font-medium text-sm';
 
   return (
-    <header className="sticky top-0 z-20 h-16">
+    <header className="sticky top-0 z-20">
       {/* Background Video */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        className={`absolute top-0 left-0 w-full object-cover z-0 transition-all duration-300 ${
+          open ? 'h-[calc(100vh-4rem)] sm:h-16' : 'h-16'
+        }`}
         onLoadedData={() => console.log('Video loaded')}
         onError={(e) => console.error('Video error:', e)}
       >
@@ -46,7 +47,11 @@ export default function Navbar() {
         Your browser does not support the video tag.
       </video>
       {/* Overlay for readability */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black/30 backdrop-blur-sm z-10" />
+      <div
+        className={`absolute top-0 left-0 w-full z-10 transition-all duration-300 ${
+          open ? 'h-[calc(100vh-4rem)] sm:h-16 bg-black/50 backdrop-blur-sm' : 'h-16 bg-black/30 backdrop-blur-sm'
+        }`}
+      />
 
       <nav className="relative max-w-7xl mx-auto flex items-center justify-between px-4 py-3 text-white z-20">
         {/* Logo (Left) */}
@@ -58,34 +63,18 @@ export default function Navbar() {
         <div
           className={`${
             open ? 'flex' : 'hidden'
-          } absolute top-16 left-0 right-0 bg-black/90 sm:bg-transparent flex-col sm:flex sm:flex-row sm:static gap-4 sm:gap-2 items-center justify-center sm:flex-grow sm:ml-8 p-4 sm:p-0`}
+          } absolute top-16 left-0 right-0 sm:bg-transparent flex-col sm:flex sm:flex-row sm:static gap-4 sm:gap-2 items-center justify-center sm:flex-grow sm:ml-8 p-4 sm:p-0`}
         >
-          <NavLink
-            to="/"
-            className={link}
-            onClick={() => setOpen(false)}
-          >
+          <NavLink to="/" className={link} onClick={() => setOpen(false)}>
             Home
           </NavLink>
-          <NavLink
-            to="/categories"
-            className={link}
-            onClick={() => setOpen(false)}
-          >
+          <NavLink to="/categories" className={link} onClick={() => setOpen(false)}>
             Categories
           </NavLink>
-          <NavLink
-            to="/about"
-            className={link}
-            onClick={() => setOpen(false)}
-          >
+          <NavLink to="/about" className={link} onClick={() => setOpen(false)}>
             About
           </NavLink>
-          <NavLink
-            to="/contact"
-            className={link}
-            onClick={() => setOpen(false)}
-          >
+          <NavLink to="/contact" className={link} onClick={() => setOpen(false)}>
             Contact
           </NavLink>
         </div>
