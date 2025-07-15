@@ -32,10 +32,10 @@ export default function HeroSection() {
           <path d="M100 88c24 32 48 48 48 80a48 48 0 01-96 0c0-24 14-42 48-80z" />
         </svg>
         <h1 className="text-4xl sm:text-5xl font-light tracking-wider">
-          Animes Planet
+          Anime Planet
         </h1>
         <p className="mt-1 text-lg sm:text-xl font-light opacity-80">
-         Welcome to Our Enimies Planet
+         Welcome to Our Animie Planet
         </p>
       </div>
     </section>
