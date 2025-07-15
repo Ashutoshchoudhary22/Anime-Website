@@ -38,8 +38,8 @@ export default function Anime() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [error, setError] = useState(null);
-  const [unmutedVideoId, setUnmutedVideoId] = useState(null); // Track the single unmuted video ID
-  const [isModalMuted, setIsModalMuted] = useState(true); // Track mute state for modal video
+  const [unmutedVideoId, setUnmutedVideoId] = useState(null);
+  const [isModalMuted, setIsModalMuted] = useState(true);
 
   const openModal = (videoSrc) => {
     setSelectedVideo(videoSrc);
@@ -51,31 +51,31 @@ export default function Anime() {
     setIsModalOpen(false);
     setSelectedVideo(null);
     setError(null);
-    setIsModalMuted(true); // Reset modal mute state
+    setIsModalMuted(true);
   };
 
   const toggleMute = (id) => {
-    setUnmutedVideoId((prev) => (prev === id ? null : id)); // Toggle: unmute this video, mute others
+    setUnmutedVideoId((prev) => (prev === id ? null : id));
   };
 
   const toggleModalMute = () => {
-    setIsModalMuted((prev) => !prev); // Toggle modal mute state
+    setIsModalMuted((prev) => !prev);
   };
 
   return (
     <>
-      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 px-4 auto-rows-[100px] sm:auto-rows-[120px]">
+      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 px-4 auto-rows-[180px] sm:auto-rows-[120px]">
         {animeData.map((item, idx) => (
           <div
             key={item.id}
-            className={`relative rounded-lg overflow-hidden shadow-lg group ${
-              idx === 0 ? 'col-span-1 sm:col-span-2 row-span-2' : ''
+            className={`relative rounded-lg overflow-hidden shadow-lg group h-[180px] ${
+              idx === 0 ? 'sm:col-span-2 sm:row-span-2 sm:h-[240px]' : 'sm:h-[120px]'
             }`}
           >
             <video
               src={item.src}
               autoPlay
-              muted={unmutedVideoId !== item.id} // Unmute only if this video's ID matches
+              muted={unmutedVideoId !== item.id}
               loop
               playsInline
               className="w-full h-full object-cover cursor-pointer"
@@ -142,7 +142,7 @@ export default function Anime() {
                   <video
                     src={selectedVideo}
                     autoPlay
-                    muted={isModalMuted} // Control modal mute state
+                    muted={isModalMuted}
                     loop
                     playsInline
                     className="w-full h-auto max-h-[90vh] sm:max-h-[80vh] object-contain"

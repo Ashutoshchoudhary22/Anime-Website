@@ -7,7 +7,8 @@ import Alltimesfavourites from './Alltimesfavourites'
 export default function Categories() {
   return (
     <>
-      <Hero />
+    <div className="bg-black text-white">
+ <Hero />
       <div className="mt-6">
            <h1 className="text-center text-2xl font-bold my-2">Latest Anime</h1>
         <Category />
@@ -22,11 +23,15 @@ export default function Categories() {
          <Latestreleases/>
       </div>
       <div className="mt-6">
-          <h1 className="text-center text-2xl font-bold my-2">All time Favourites </h1>
+          <h1 className="text-center text-2xl font-bold my-2 ">All time Favourites </h1>
          <Alltimesfavourites/>
       </div>
-       
-      <Footer />
+       <div className="mt-8">
+    <Footer />
+       </div>
+  
+    </div>
+     
     </>
   );
 }
