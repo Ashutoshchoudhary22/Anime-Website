@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { FiDownload, FiVolume2, FiVolumeX } from 'react-icons/fi';
-import vi from '../assets/hero3.mp4';
-import vid from '../assets/video2.mp4';
-import vide from '../assets/video4.mp4';
-import video from '../assets/video6.mp4';
-import videos from '../assets/video7.mp4';
+import vi from '../assets/Latest anime/video16.mp4';
+import vid from '../assets/Latest anime/video14.mp4';
+import vide from '../assets/Latest anime/video15.mp4';
+import video from '../assets/Latest anime/video13.mp4';
+import videos from '../assets/Latest anime/video17.mp4';
 
 const animeData = [
   {

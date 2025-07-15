@@ -1,8 +1,8 @@
 import shingekiVideo from '../assets/video5.mp4';
 import onePunchVideo from '../assets/video2.mp4';
 import blackCloverVideo from '../assets/video3.mp4';
-import hunterVideo from '../assets/vi6.mp4';
-import demonSlayerVideo from '../assets/hero3.mp4';
+import hunterVideo from '../assets/video8.mp4';
+import demonSlayerVideo from '../assets/video9.mp4';
 
 export const featured = [
   { id: 1, src: shingekiVideo, title: 'Shingeki no Kyojin' },
